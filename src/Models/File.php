@@ -104,13 +104,11 @@ abstract class File implements FileContract
      */
     public function getZipPath(): string
     {
-        return Str::ascii(
-            ltrim(
+        return ltrim(
                 preg_replace('|/{2,}|', '/',
                     $this->zipPath
                 ),
-                '/')
-        );
+        '/');
     }
 
     /**
